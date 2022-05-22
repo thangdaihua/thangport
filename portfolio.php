@@ -1,3 +1,4 @@
+
 <?php include "assest/head.php"; ?>
 <?php
 if (!$loggedin) {
@@ -29,6 +30,7 @@ $stmt->execute();
 $hight_uishots = $stmt->fetchAll();
 ?>
 <?php include "assest/gheader.php" ?>
+<title>2T Portfolio</title>
 <section class="position-relative overflow-hidden py-4 mb-3">
     <div class="container pt-lg-3">
         <div class="row flex-lg-nowrap">
@@ -150,9 +152,9 @@ $hight_uishots = $stmt->fetchAll();
                 <div class="card-body">
                     <h4 class="graf graf--p"><strong class="markup--strong markup--p-strong">Paracel Technology
                             Solutions &mdash; UI-UX Designer</strong></h4>
-                    <p class="graf graf--p"><strong class="markup--strong markup--p-strong">1/</strong><em
-                            class="markup--em markup--p-em">1/2019 — 1/2020 • Full-time • 120 Xô Viết Nghệ Tĩnh, Đà
-                            Nẵn</em></p>
+                    <p class="graf graf--p"><em class="markup--em markup--p-em">1/2019 — 1/2020 • Full-time • 120 Xô
+                            Viết Nghệ Tĩnh, Đà
+                            Nẵng</em></p>
                     <p class="graf graf--p">Paracel là một công ty IT. Domain chính là gia công phần mềm cho thị trường
                         Nhật và Việt Nam. Ngoài các dự án làm cho khách hàng thì công ty cũng có những product của mình.
                         Công việc của mình ở đây là UI/UX designer. Tiếp nhận thông tin yêu cầu của khách hàng, tìm hiểu
@@ -179,7 +181,8 @@ $hight_uishots = $stmt->fetchAll();
                 <div class="card-body">
                     <h4 class="graf graf--p"><strong class="markup--strong markup--p-strong">Nal
                             Solutions — Product-UI/UX Designer</strong></h4>
-                    <p class="graf graf--p"><em class="markup--em markup--p-em">10/2021 — Now • Full-time • 16 Lý Thường
+                    <p class="graf graf--p"><em class="markup--em markup--p-em">10/2021 — Hiện tại • Full-time • 16 Lý
+                            Thường
                             Kiệt, Đà Nẵng.</em></p>
                     <p class="graf graf--p">Nal Solutions là một công ty chuyên thiết kế, xây dựng phần mềm, ứng dụng,
                         website, cung cấp giải pháp công nghệ cho
@@ -201,7 +204,7 @@ $hight_uishots = $stmt->fetchAll();
                 <div class="card-body">
                     <h4 class="graf graf--p"><strong class="markup--strong markup--p-strong">Đại học Bách Khoa — Đại học
                             Đà Nẵng</strong></h4>
-                    <p class="graf graf--p"><em class="markup--em markup--p-em">/2016–12/2020</em></p>
+                    <p class="graf graf--p"><em class="markup--em markup--p-em">8/2016–12/2020</em></p>
                     <p class="graf graf--p">Mình học Công nghệ thông tin, chuyên ngành Hệ thống thông tin ở Bách khoa.
                         Học Hệ thống thông tin giúp mình có thêm nhiều kỹ năng nền tảng để phân tích nghiệp vụ của dự
                         án. Đồ án tốt nghiệp của mình được 9,3 cao nhất khoá chương trình mình học.</p>
@@ -380,9 +383,8 @@ $hight_uishots = $stmt->fetchAll();
                 </div>
             </section>
             <h2 id='shot' class="graf scr-header graf--h4 mt-5">UI shots</h2>
-            <p class="graf graf--p">Đây là các screen shots một số dự án mình từng tham gia
-                thực hiện. Mọi
-                người tham khảo phong cách thiết kế UI của mình nhé!</p>
+            <p class="mb-lg-4">Đây là các screen shots một số dự án mình từng tham gia thực hiện. Vì đây là UI shots nên truyền tải được đến mọi 
+                người rất ít ý tưởng và cách giải quyết vấn đề của dự án, UI shots là cách để mình cho mọi người xem cảm quan và phong cách thiết kế UI của mình. Để xem kỹ hơn thì mọi người nên xem ở các <a href="./allArticles.php?catID=24" >UI/UX Case Study</a> nhé! </p>
 
             <div class="row">
                 <?php foreach ($hight_uishots as $hight_uishot) : ?>
@@ -397,6 +399,9 @@ $hight_uishots = $stmt->fetchAll();
                     </div>
                 </div>
                 <?php endforeach;  ?>
+                <div class="text-center"><a href="./allUiShots.php"
+                                        class="btn text-center btn-primary shadow-primary btn-lg">Xem thêm</a>
+                                </div>
             </div>
             <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                 aria-hidden="true">
@@ -431,7 +436,7 @@ $hight_uishots = $stmt->fetchAll();
             <h2 class="graf scr-header graf--h4 mt-5">UI/UX case study</h2>
             <p class="graf graf--p">Đây là đầy đủ các bước của một dự án mình làm UI/UX, gồm từ các bước đầu tiên
                 phân tích nghiệp vụ dự án đến cho ra được một UI hoàn chỉnh</p>
-                <?php foreach ($casestudy as $article) : ?>
+            <?php foreach ($casestudy as $article) : ?>
             <div class="card mb-4 border-primary card-hover">
                 <div class="card-body">
                     <div class="tab-pane fade active show" id="preview2" role="tabpanel">
@@ -463,6 +468,9 @@ $hight_uishots = $stmt->fetchAll();
                 </div>
             </div>
             <?php endforeach;  ?>
+            <div class="text-center"><a href="./allArticles.php?catID=24"
+                                        class="btn text-center btn-primary shadow-primary btn-lg">Xem thêm</a>
+                                </div>
             <h2 id="blog" class="graf scr-header graf--h4 mt-5">Bài viết</h2>
             <p class="graf graf--p">Đây là một số bài viết mình đã viết. Ngoài các bài viết về
                 design và
@@ -473,7 +481,7 @@ $hight_uishots = $stmt->fetchAll();
 
 
 
-                        <div >
+                        <div>
                             <div class="swiper mx-n2 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
                                 data-swiper-options="{
                 &quot;slidesPerView&quot;: 1,
@@ -539,7 +547,7 @@ $hight_uishots = $stmt->fetchAll();
                                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                                 <br>
                                 <div class="text-center"><a href="./allArticles.php"
-                                        class="btn text-center btn-primary shadow-primary btn-lg">Coi tiếp</a>
+                                        class="btn text-center btn-primary shadow-primary btn-lg">Xem thêm</a>
                                 </div>
                             </div>
                         </div>
@@ -557,14 +565,14 @@ $hight_uishots = $stmt->fetchAll();
 </main>
 <?php include "assest/footer.php" ?>
 <script>
-    function toggleHeading(el) {
-        $(el).toggleClass("open")
-    }
+function toggleHeading(el) {
+    $(el).toggleClass("open")
+}
 
 
-    //based on https://codepen.io/chriscoyier/pen/EnLwb
+//based on https://codepen.io/chriscoyier/pen/EnLwb
 
-    var toc =
+var toc =
     "<div class='sticty-menu offcanvas offcanvas-end offcanvas-expand-lg' id='blog-sidebar'>" +
     "<div class='offcanvas-body'>" +
     "<div class='card card-body border-0 position-relative mb-4 bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted'>" +
@@ -572,34 +580,33 @@ $hight_uishots = $stmt->fetchAll();
     "<div class='position-relative zindex-2'>" +
     "<h3 class='h5'>Nội dung</h3>" +
     "<ul class='nav flex-column fs-sm'>";
-    var tocLi, el, hTitle, hlink;
-    $("article h2").each(function (index) {
-        el = $(this)
-        el.attr('id', 'heading-' + index);
-        el.attr('onclick', 'toggleHeading(this)');
-        el.nextUntil('h2').wrapAll('<div class="text-body"></div>');
+var tocLi, el, hTitle, hlink;
+$("article h2").each(function(index) {
+    el = $(this)
+    el.attr('id', 'heading-' + index);
+    el.attr('onclick', 'toggleHeading(this)');
+    el.nextUntil('h2').wrapAll('<div class="text-body"></div>');
 
-        hTitle = el.text();
-        hLink = "#" + el.attr('id');
+    hTitle = el.text();
+    hLink = "#" + el.attr('id');
 
-        tocLi =
+    tocLi =
         "<li class='nav-item mb-1'>" +
         "<a class='nav-link py-1 px-0' href='" + hLink + "'>" +
         hTitle +
         "</a>" +
         "</li>";
 
-        toc += tocLi;
-    });
+    toc += tocLi;
+});
 
-    toc +=
+toc +=
     "</ul>" +
     "</div>" +
     "</div>" +
     "</div>" +
     "</div>";
 
-    $("aside").append(toc);
-    $('#heading-0').addClass = "open"
-
+$("aside").append(toc);
+$('#heading-0').addClass = "open"
 </script>

@@ -45,14 +45,37 @@ $comments = $stmt->fetchAll();
                         </div>
                     </div>
                     <div class="row">
-                    <article class="post-body col-xl-9 col-lg-8 text-break">
-                        <?= $article["article_content"] ?>
-                    </article>
-                    <aside class="col-xl-3 col-lg-4">
+                        <article class="post-body col-xl-9 col-lg-8 text-break">
+                            <?= $article["article_content"] ?>
+                            <!-- <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button type="button" class="close" data-dismiss="modal"><span
+                                                    aria-hidden="true">&times;</span><span
+                                                    class="sr-only">Close</span></button>
+                                            <img src="" class="imagepreview" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg modalll">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                        <img src="" class="imagepreview" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <aside class="col-xl-3 col-lg-4">
 
-</aside>
+                        </aside>
                     </div>
-                 
+
                     <!-- author Info -->
                 </div>
             </div><!-- /Article -->
@@ -65,14 +88,14 @@ $comments = $stmt->fetchAll();
 <!-- Footer -->
 <?php include "assest/footer.php" ?>
 <script>
-    function toggleHeading(el) {
-        $(el).toggleClass("open")
-    }
+function toggleHeading(el) {
+    $(el).toggleClass("open")
+}
 
 
-    //based on https://codepen.io/chriscoyier/pen/EnLwb
+//based on https://codepen.io/chriscoyier/pen/EnLwb
 
-    var toc =
+var toc =
     "<div class='sticty-menu offcanvas offcanvas-end offcanvas-expand-lg' id='blog-sidebar'>" +
     "<div class='offcanvas-body'>" +
     "<div class='card card-body border-0 position-relative mb-4 bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted'>" +
@@ -80,36 +103,43 @@ $comments = $stmt->fetchAll();
     "<div class='position-relative zindex-2'>" +
     "<h3 class='h5'>Nội dung</h3>" +
     "<ul class='nav flex-column fs-sm'>";
-    var tocLi, el, hTitle, hlink;
-    $("article h2").each(function (index) {
-        el = $(this)
-        el.attr('id', 'heading-' + index);
-        el.attr('onclick', 'toggleHeading(this)');
-        el.nextUntil('h2').wrapAll('<div class="text-body"></div>');
+var tocLi, el, hTitle, hlink;
+$("article h2").each(function(index) {
+    el = $(this)
+    el.attr('id', 'heading-' + index);
+    el.attr('onclick', 'toggleHeading(this)');
+    el.nextUntil('h2').wrapAll('<div class="text-body"></div>');
 
-        hTitle = el.text();
-        hLink = "#" + el.attr('id');
+    hTitle = el.text();
+    hLink = "#" + el.attr('id');
 
-        tocLi =
+    tocLi =
         "<li class='nav-item mb-1'>" +
         "<a class='nav-link py-1 px-0' href='" + hLink + "'>" +
         hTitle +
         "</a>" +
         "</li>";
 
-        toc += tocLi;
-    });
+    toc += tocLi;
+});
 
-    toc +=
+toc +=
     "</ul>" +
     "</div>" +
     "</div>" +
     "</div>" +
     "</div>";
 
-    $("aside").append(toc);
-    $('#heading-0').addClass = "open"
-
+$("aside").append(toc);
+$('#heading-0').addClass = "open"
+</script>
+<script>
+$(function() {
+    $('article img').on('click', function() {
+        $('.imagepreview').attr('src', $(this).attr('src'));
+        $('#image-gallery').modal('show');
+    });
+});
 </script>
 <!-- /Footer -->
 

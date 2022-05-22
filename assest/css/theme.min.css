@@ -5,6 +5,13 @@ html {
 .highlight{
   padding: 0.625rem 0.5rem !important;
 }
+.modalll{
+  max-width: 1200px !important;
+}
+.post-body  img{
+  cursor: zoom-in;
+}
+
 /* .container article {
   flex: 0 2 640px;
   margin: 0 12px;

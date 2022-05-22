@@ -22,8 +22,8 @@ $hight_uishots = $stmt->fetchAll();
     <div class="row justify-content-center text-center pb-3 mb-sm-2 mb-lg-3">
         <div class="col-xl-6 col-lg-7 col-md-9">
             <h2 class="h1 mb-lg-4">UI shots</h2>
-            <p class="mb-lg-4">Đây là các screen shots một số dự án mình từng tham gia thực hiện. Mọi người tham khảo
-                phong cách thiết kế UI của mình nhé!</p>
+            <p class="mb-lg-4">Đây là các screen shots một số dự án mình từng tham gia thực hiện. Vì đây là UI shots nên truyền tải được đến mọi 
+                người rất ít ý tưởng và cách giải quyết vấn đề của dự án, UI shots là cách để mình cho mọi người xem cảm quan và phong cách thiết kế UI của mình. Để em kỹ hơn thì mọi người nên xem ở các <a href="./allArticles.php?catID=24" > UI/UX Case Study </a> </p>
             <!-- <p class="fs-lg text-muted mb-0">Make sure all your tasks are organized so you can set the priorities and
             focus on important.</p> -->
         </div>
